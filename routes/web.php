@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Car;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/addCar');
 });
+
+Route::get('/addCar', function() {
+    return view('add_car');
+})->name('get.car.add');
+
+Route::post('/addCar', [Car::class, 'addCar']) -> name('post.car.add');
+
+Route::get('/cars', [Car::class, 'listCars']) -> name('get.cars');
