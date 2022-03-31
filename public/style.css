@@ -1,0 +1,10 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box; margin: 40px}
+
+label {
+  color: rgba(29, 29, 29, 0.814) !important
+}
+
+input {
+  margin-bottom: 10px !important
+}
